@@ -6,8 +6,6 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin:  'jacoco'
 
-apply plugin: 'java'
-
 jacoco {
 	 toolVersion = "0.8.5"
      reportsDir =file("$buildDir/customJacocoReportDir")
