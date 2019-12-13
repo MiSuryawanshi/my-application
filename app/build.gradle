@@ -4,20 +4,22 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
-apply plugin:  'jacoco'
+apply plugin: '../jacoco.gradle'
 
-jacoco {
-	 toolVersion = "0.8.5"
-     reportsDir =file("$buildDir/customJacocoReportDir")
-}
+//apply plugin:  'jacoco'
 
-jacocoTestReport {
-    reports {
-        xml.enabled true
-        csv.enabled true
-        html.destination file("${buildDir}/jacocoHtml")
-    }
-}
+//jacoco {
+//	 toolVersion = "0.8.5"
+//     reportsDir =file("$buildDir/customJacocoReportDir")
+//}
+
+//jacocoTestReport {
+ //   reports {
+//        xml.enabled true
+//        csv.enabled true
+//        html.destination file("${buildDir}/jacocoHtml")
+//    }
+//}
 
 android {
     compileSdkVersion 29
