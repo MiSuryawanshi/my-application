@@ -4,6 +4,21 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin:  'jacoco'
+
+jacoco {
+	 toolVersion = "0.8.5"
+     reportsDir =file("$buildDir/customJacocoReportDir")
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination file("${buildDir}/jacocoHtml")
+    }
+}
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
